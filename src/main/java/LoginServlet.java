@@ -22,10 +22,14 @@ public class LoginServlet extends HttpServlet {
             Map<String, String> brugerMap = new HashMap<>();
 
             brugerMap.put("test", "test");
+            brugerMap.put("admin", "1234");
+
 
             servletContext.setAttribute("brugerMap", brugerMap);
         }
-        if (!((Map<String, String>) servletContext.getAttribute("brugerMap")).containsKey(navn)) {
+
+
+            if (!((Map<String, String>) servletContext.getAttribute("brugerMap")).containsKey(navn)) {
 
             //todo gå til logindside
 
@@ -35,7 +39,8 @@ public class LoginServlet extends HttpServlet {
         }
         if (((Map<String, String>) servletContext.getAttribute("brugerMap")).get(navn).equalsIgnoreCase(kodeord)) {
 
-
+if(navn.equalsIgnoreCase("admin"))
+    request.getRequestDispatcher("WEB-INF/admin.jsp").forward(request,response);
             request.getRequestDispatcher("WEB-INF/HuskeListe.jsp").forward(request,response);
         }
 request.setAttribute("besked", "din kode var forkert, prøv igen");

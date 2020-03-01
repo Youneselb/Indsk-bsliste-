@@ -23,7 +23,7 @@ ${requestScope.besked}
 <br>
 
 
-<h2>HTML Forms</h2>
+
 
 <form action="LoginServlet" method="post">
     <label for="fname">First name:</label><br>
