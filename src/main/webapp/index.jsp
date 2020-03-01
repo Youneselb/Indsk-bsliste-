@@ -12,7 +12,18 @@
 </head>
 <body>
 
-Velkommen til din online indløbsliste
+<h1>Velkommen til din online indløbsliste</h1>
+
+<br>
+<br>
+<br>
+
+
+${requestScope.besked}
+
+
+<br>
+
 
 <h2>HTML Forms</h2>
 
