@@ -12,7 +12,6 @@
 </head>
 <body>
 
-Du har nu adgang til din huskeliste
 
 
 </body>
